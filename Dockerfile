@@ -26,7 +26,6 @@ RUN apt-get update \
 WORKDIR /opt/aegis
 COPY --from=frontend-build /src/frontend/.next/standalone ./frontend
 COPY --from=frontend-build /src/frontend/.next/static ./frontend/.next/static
-COPY --from=frontend-build /src/frontend/public ./frontend/public
 COPY --from=backend-build /src/backend/target/ngo-web-backend-1.0.0.jar ./backend.jar
 COPY database ./sql
 COPY nginx.conf /etc/nginx/conf.d/default.conf
