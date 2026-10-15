@@ -38,6 +38,5 @@ RUN chmod +x ./start.sh \
 
 ENV PORT=80
 EXPOSE 80
-VOLUME ["/var/lib/mysql"]
 
 CMD ["/opt/aegis/start.sh"]
